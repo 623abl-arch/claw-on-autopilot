@@ -1,21 +1,23 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import TimeAndMoney from "@/components/TimeAndMoney";
+import QuantifiedOutcomes from "@/components/QuantifiedOutcomes";
 import ProvenStats from "@/components/ProvenStats";
-import Testimonials from "@/components/Testimonials";
-import SavingsBanner from "@/components/SavingsBanner";
+import DayInTheLife from "@/components/DayInTheLife";
+import InteractiveDemo from "@/components/InteractiveDemo";
 import WhatIs from "@/components/WhatIs";
-import ThreeReasons from "@/components/ThreeReasons";
+import Features from "@/components/Features";
 import FullStack from "@/components/FullStack";
 import IntegrationsStrip from "@/components/IntegrationsStrip";
-import InteractiveDemo from "@/components/InteractiveDemo";
-import Features from "@/components/Features";
-import SavingsCalculator from "@/components/SavingsCalculator";
+import ThreeReasons from "@/components/ThreeReasons";
+import Hardware from "@/components/Hardware";
 import Pricing from "@/components/Pricing";
+import SavingsCalculator from "@/components/SavingsCalculator";
+import SavingsStory from "@/components/SavingsStory";
+import TimeAndMoney from "@/components/TimeAndMoney";
 import Comparison from "@/components/Comparison";
 import WhoItsFor from "@/components/WhoItsFor";
-import Hardware from "@/components/Hardware";
 import About from "@/components/About";
+import Testimonials from "@/components/Testimonials";
 import CtaFooter from "@/components/CtaFooter";
 import SiteFooter from "@/components/SiteFooter";
 import LiveStatusWidget from "@/components/LiveStatusWidget";
@@ -24,19 +26,29 @@ const Index = () => (
   <>
     <Navbar />
     <Hero />
-    <TimeAndMoney />
+    {/* The wow: outcomes & proof */}
+    <QuantifiedOutcomes />
     <ProvenStats />
-    <SavingsBanner />
-    <WhatIs />
+    {/* The emotional hook: before/after */}
+    <DayInTheLife />
+    {/* See it in action */}
     <InteractiveDemo />
+    {/* What is it */}
+    <WhatIs />
+    {/* What's inside */}
+    <Features />
     <FullStack />
     <IntegrationsStrip />
     <ThreeReasons />
-    <Features />
-    <SavingsCalculator />
+    {/* The box & price */}
     <Hardware />
     <Pricing />
+    {/* The math */}
+    <SavingsCalculator />
+    <SavingsStory />
+    <TimeAndMoney />
     <Comparison />
+    {/* Who & who built it */}
     <WhoItsFor />
     <About />
     <Testimonials />
