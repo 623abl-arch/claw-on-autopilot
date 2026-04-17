@@ -1,5 +1,3 @@
-import { useState, useMemo } from "react";
-
 const workflows = [
   {
     trigger: "Phone rings at 8pm",
@@ -29,18 +27,9 @@ const workflows = [
 
 const fmt = (n: number) => "$" + Math.round(n).toLocaleString();
 
+const moSave = 562 - 20;
+
 const TimeAndMoney = () => {
-  const [saas, setSaas] = useState(562);
-  const [hrs, setHrs] = useState(10);
-  const [rate, setRate] = useState(120);
-
-  const { moSave, moTime, total } = useMemo(() => {
-    const moSave = saas - 20;
-    const moTime = hrs * 4;
-    const total = moSave + moTime * rate;
-    return { moSave, moTime, total };
-  }, [saas, hrs, rate]);
-
   return (
     <section className="py-20 md:py-28 bg-background">
       <div className="container max-w-6xl mx-auto px-4">
@@ -136,44 +125,6 @@ const TimeAndMoney = () => {
               <div className="text-xs text-primary/80 mt-1.5">{lbl}</div>
             </div>
           ))}
-        </div>
-
-        {/* Calculator */}
-        <div className="rounded-xl bg-surface border border-border p-6 mb-10">
-          <div className="text-sm font-semibold text-foreground mb-4">See your actual numbers</div>
-          {[
-            { label: "Current SaaS spend/mo", value: saas, set: setSaas, min: 100, max: 1500, step: 50, display: fmt(saas) },
-            { label: "Admin hours lost/week", value: hrs, set: setHrs, min: 2, max: 30, step: 1, display: `${hrs} hrs` },
-            { label: "Your hourly rate", value: rate, set: setRate, min: 50, max: 300, step: 10, display: `${fmt(rate)}/hr` },
-          ].map((s) => (
-            <div key={s.label} className="flex items-center gap-3 mb-3">
-              <label className="text-sm text-muted-foreground w-44 flex-shrink-0">{s.label}</label>
-              <input
-                type="range"
-                min={s.min}
-                max={s.max}
-                step={s.step}
-                value={s.value}
-                onChange={(e) => s.set(parseInt(e.target.value))}
-                className="flex-1 accent-primary"
-              />
-              <span className="text-sm font-medium text-foreground min-w-[64px] text-right">{s.display}</span>
-            </div>
-          ))}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-5">
-            <div className="rounded-lg border border-border bg-card p-4">
-              <div className="text-xl font-semibold text-foreground">{fmt(moSave)}</div>
-              <div className="text-xs text-muted-foreground mt-1">cash back per month</div>
-            </div>
-            <div className="rounded-lg border border-border bg-card p-4">
-              <div className="text-xl font-semibold text-foreground">{moTime} hrs</div>
-              <div className="text-xs text-muted-foreground mt-1">time back per month</div>
-            </div>
-            <div className="rounded-lg border-2 border-primary bg-primary/10 p-4">
-              <div className="text-xl font-semibold text-primary">{fmt(total)}/mo</div>
-              <div className="text-xs text-primary/80 mt-1">total value recovered</div>
-            </div>
-          </div>
         </div>
 
         {/* Workflows */}

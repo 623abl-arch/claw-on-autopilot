@@ -9,9 +9,14 @@ const Hero = () => (
       <div className="grid md:grid-cols-2 gap-12 items-center">
         {/* Left — text */}
         <div>
-          <span className="inline-block text-xs font-semibold px-3 py-1.5 rounded-full bg-primary/15 text-primary border border-primary/25 mb-6">
-            AI-powered automation for trades
-          </span>
+          <div className="flex flex-wrap items-center gap-2 mb-6">
+            <span className="inline-block text-xs font-semibold px-3 py-1.5 rounded-full bg-primary/15 text-primary border border-primary/25">
+              AI-powered automation for trades
+            </span>
+            <span className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-card text-foreground border border-border">
+              🔧 Built by a licensed plumber in Clearwater, FL
+            </span>
+          </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground leading-tight mb-5">
             MEP Claw, the autopilot for your trades&nbsp;business.
           </h1>
