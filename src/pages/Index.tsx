@@ -28,16 +28,15 @@ const Index = () => (
     <Hero />
     {/* The wow: outcomes & proof */}
     <QuantifiedOutcomes />
-    <ProvenStats />
     {/* The emotional hook: before/after */}
     <DayInTheLife />
     {/* See it in action */}
     <InteractiveDemo />
-    {/* What is it */}
-    <WhatIs />
     {/* What's inside */}
     <Features />
     <FullStack />
+    {/* What is it — three boxes after the stack */}
+    <WhatIs />
     <IntegrationsStrip />
     <ThreeReasons />
     {/* The box & price */}
