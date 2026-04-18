@@ -9,18 +9,10 @@ const Hero = () => (
       <div className="grid md:grid-cols-2 gap-12 items-center">
         {/* Left — text */}
         <div>
-          <div className="flex flex-wrap items-center gap-2 mb-6">
-            <span className="inline-block text-xs font-semibold px-3 py-1.5 rounded-full bg-primary/15 text-primary border border-primary/25">
-              AI-powered automation for trades
-            </span>
-            <span className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-card text-foreground border border-border">
-              🔧 Built by a licensed plumber in Clearwater, FL
-            </span>
-          </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground leading-tight mb-5">
             MEP Claw, the autopilot for your trades&nbsp;business.
           </h1>
-          <p className="text-2xl md:text-3xl text-foreground leading-snug mb-8 max-w-xl font-medium">
+          <p className="text-xl md:text-2xl text-foreground leading-snug mb-8 max-w-xl font-medium">
             Why keep paying hundreds every month for tools you don't even own? Save <strong className="font-extrabold text-primary">thousands</strong> a year and get <strong className="font-extrabold text-primary">hours</strong> back every week.
           </p>
           <div className="flex items-center gap-4 mb-8">
@@ -101,13 +93,14 @@ const Hero = () => (
               { name: "Jobber", color: "text-green-500" },
               { name: "ServiceTitan", color: "text-blue-500" },
               { name: "FieldEdge", color: "text-purple-500" },
+              { name: "CompanyCam", color: "text-sky-400" },
             ].map(({ name, color }) => (
               <span
                 key={name}
-                className={`relative text-3xl md:text-4xl font-bold ${color}`}
+                className={`relative text-2xl md:text-3xl font-bold ${color}`}
               >
                 <span>{name}</span>
-                <span className="absolute inset-0 flex items-center justify-center text-destructive text-5xl md:text-6xl font-black pointer-events-none" aria-hidden="true">
+                <span className="absolute inset-0 flex items-center justify-center text-destructive text-4xl md:text-5xl font-black pointer-events-none" aria-hidden="true">
                   ✕
                 </span>
               </span>
