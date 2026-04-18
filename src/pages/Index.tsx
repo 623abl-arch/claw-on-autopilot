@@ -7,6 +7,7 @@ import InteractiveDemo from "@/components/InteractiveDemo";
 import WhatIs from "@/components/WhatIs";
 import Features from "@/components/Features";
 import FullStack from "@/components/FullStack";
+import HowItWorks from "@/components/HowItWorks";
 import IntegrationsStrip from "@/components/IntegrationsStrip";
 import ThreeReasons from "@/components/ThreeReasons";
 import Hardware from "@/components/Hardware";
@@ -30,13 +31,15 @@ const Index = () => (
     <QuantifiedOutcomes />
     {/* The emotional hook: before/after */}
     <DayInTheLife />
+    {/* What is it — moved directly after the Tuesday story */}
+    <WhatIs />
     {/* See it in action */}
     <InteractiveDemo />
     {/* What's inside */}
     <Features />
     <FullStack />
-    {/* What is it — three boxes after the stack */}
-    <WhatIs />
+    {/* Three steps + See the full process — moved under the full stack */}
+    <HowItWorks />
     <IntegrationsStrip />
     <ThreeReasons />
     {/* The box & price */}
