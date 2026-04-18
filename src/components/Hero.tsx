@@ -97,24 +97,27 @@ const Hero = () => (
 
       {/* Switcher Bar */}
       <div className="mt-16 pt-8 border-t border-border">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10">
-          {/* Jobber Side */}
-          <div className="flex items-center gap-4">
-            <span className="text-3xl font-bold text-jobber">Jobber</span>
-            <span className="text-3xl font-bold text-muted-foreground line-through decoration-red-500/60 decoration-2">
-              $349/mo
-            </span>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10">
+          {/* Competitors crossed out */}
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+            {["Jobber", "ServiceTitan", "FieldEdge"].map((name) => (
+              <span
+                key={name}
+                className="relative text-3xl md:text-4xl font-bold text-muted-foreground"
+              >
+                <span className="line-through decoration-destructive decoration-[3px]">{name}</span>
+                <span className="absolute inset-0 flex items-center justify-center text-destructive text-5xl md:text-6xl font-black pointer-events-none" aria-hidden="true">
+                  ✕
+                </span>
+              </span>
+            ))}
           </div>
 
-          {/* Arrow / Slash */}
-          <div className="flex items-center text-primary">
-            <span className="text-4xl font-light">/</span>
-            <ArrowRight className="w-8 h-8 mx-3" />
-            <span className="text-4xl font-light">/</span>
-          </div>
+          {/* Arrow */}
+          <ArrowRight className="w-10 h-10 text-primary flex-shrink-0" />
 
-          {/* MEP Claw Side */}
-          <div className="flex items-center gap-4">
+          {/* MEP Claw */}
+          <div className="flex items-center gap-3">
             <img
               src={logo}
               alt="MEP Claw"
@@ -123,9 +126,7 @@ const Hero = () => (
               height={48}
               loading="lazy"
             />
-            <span className="text-3xl font-bold text-primary">
-              $130<span className="text-lg text-muted-foreground font-normal">/mo</span>
-            </span>
+            <span className="text-3xl md:text-4xl font-bold text-primary">MEP Claw</span>
           </div>
         </div>
 
