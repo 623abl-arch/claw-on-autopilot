@@ -20,11 +20,8 @@ const Hero = () => (
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground leading-tight mb-5">
             MEP Claw, the autopilot for your trades&nbsp;business.
           </h1>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-4 max-w-lg">
-            A pre-configured AI agent on hardware you own. No cloud subscriptions. No complicated setup. Just plug it in and let it work.
-          </p>
-          <p className="text-sm text-muted-foreground mb-8">
-            No cloud. No subscriptions. Your hardware, your data.
+          <p className="text-2xl md:text-3xl text-foreground leading-snug mb-8 max-w-xl font-medium">
+            Why keep paying hundreds every month for tools you don't even own? Save <strong className="font-extrabold text-primary">thousands</strong> a year and get <strong className="font-extrabold text-primary">hours</strong> back every week.
           </p>
           <div className="flex items-center gap-4 mb-8">
             <Button variant="cta" size="lg" asChild>
@@ -99,13 +96,17 @@ const Hero = () => (
       <div className="mt-16 pt-8 border-t border-border">
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10">
           {/* Competitors crossed out */}
-          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
-            {["Jobber", "ServiceTitan", "FieldEdge"].map((name) => (
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
+            {[
+              { name: "Jobber", color: "text-green-500" },
+              { name: "ServiceTitan", color: "text-blue-500" },
+              { name: "FieldEdge", color: "text-purple-500" },
+            ].map(({ name, color }) => (
               <span
                 key={name}
-                className="relative text-3xl md:text-4xl font-bold text-muted-foreground"
+                className={`relative text-3xl md:text-4xl font-bold ${color}`}
               >
-                <span className="line-through decoration-destructive decoration-[3px]">{name}</span>
+                <span>{name}</span>
                 <span className="absolute inset-0 flex items-center justify-center text-destructive text-5xl md:text-6xl font-black pointer-events-none" aria-hidden="true">
                   ✕
                 </span>
@@ -131,11 +132,11 @@ const Hero = () => (
         </div>
 
         {/* Keep the difference */}
-        <p className="text-center mt-6 text-xl font-semibold text-foreground">
-          Apps are <span className="text-destructive font-bold">dead</span>. Own your stack.
+        <p className="text-center mt-6 text-xl md:text-2xl font-semibold text-foreground">
+          Apps are <span className="text-destructive font-bold">dead</span>. Own your stack — and finally save serious <span className="text-primary font-bold">time</span> and <span className="text-primary font-bold">money</span>.
         </p>
-        <p className="text-center mt-3 text-sm text-muted-foreground max-w-2xl mx-auto">
-          Every tool on this list runs on hardware you own. No subscriptions, no price hikes, no one pulling the plug on your business.
+        <p className="text-center mt-3 text-base text-muted-foreground max-w-2xl mx-auto">
+          Stop wasting hundreds every month on tools you don't own. MEP Claw replaces Jobber, ServiceTitan, CompanyCam, and the rest with one computer you actually own.
         </p>
       </div>
     </div>
