@@ -29,6 +29,8 @@ const Index = () => (
     <Hero />
     {/* The wow: outcomes & proof */}
     <QuantifiedOutcomes />
+    {/* Built by a contractor — Discord mockup */}
+    <About />
     {/* The emotional hook: before/after */}
     <DayInTheLife />
     {/* What is it — moved directly after the Tuesday story */}
@@ -52,7 +54,6 @@ const Index = () => (
     <Comparison />
     {/* Who & who built it */}
     <WhoItsFor />
-    <About />
     <Testimonials />
     <CtaFooter />
     <SiteFooter />
