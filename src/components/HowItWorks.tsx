@@ -24,7 +24,7 @@ const steps = [
 const HowItWorks = () => (
   <section id="how-it-works" className="py-20 md:py-28 bg-surface">
     <div className="container max-w-6xl mx-auto px-4">
-      <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">How It Works</h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">The Process </h2>
       <p className="text-muted-foreground text-base mb-12">Three steps to autopilot.</p>
 
       <div className="grid md:grid-cols-3 gap-5">
