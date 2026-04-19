@@ -19,8 +19,8 @@ const features = [
 const Features = () => (
   <section id="features" className="py-20 md:py-28 bg-background">
     <div className="container max-w-6xl mx-auto px-4">
-      <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">The Full Stack — What's Actually Running</h2>
-      <p className="text-muted-foreground text-base mb-12 max-w-xl">Not "an AI agent." A complete field-service operating system, pre-wired and yours.</p>
+      <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">Features</h2>
+      <p className="text-muted-foreground text-base mb-12 max-w-xl">A complete field-service operating system, pre-wired and yours.</p>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {features.map((f) => (

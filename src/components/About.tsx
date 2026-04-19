@@ -12,7 +12,7 @@ const About = () => (
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
-            Built by a contractor, for contractors.
+            Built by contractors
           </h2>
           <p className="text-muted-foreground text-base leading-relaxed mb-5">
             MEP Claw was built by a licensed plumber and GC who got tired of watching money leave his business every month for tools he didn't control. After building and running the system on his own crew, he packaged it for other trades.
