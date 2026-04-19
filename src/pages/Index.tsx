@@ -40,6 +40,10 @@ const Index = () => (
     {/* Features */}
     <Features />
     <FullStack />
+    {/* You own everything */}
+    <Comparison />
+    {/* Who it's for */}
+    <WhoItsFor />
     <IntegrationsStrip />
     <ThreeReasons />
     {/* The box & price */}
@@ -49,9 +53,6 @@ const Index = () => (
     <SavingsCalculator />
     <SavingsStory />
     <TimeAndMoney />
-    <Comparison />
-    {/* Who & who built it */}
-    <WhoItsFor />
     <Testimonials />
     <CtaFooter />
     <SiteFooter />
