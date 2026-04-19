@@ -8,7 +8,7 @@ const About = () => (
         <div>
           <div className="inline-block rounded-md border border-primary/40 bg-primary/10 px-4 py-2 mb-8">
             <span className="text-xs font-bold text-primary uppercase tracking-widest">
-              Built by a contractor
+              From the field, not a boardroom
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">

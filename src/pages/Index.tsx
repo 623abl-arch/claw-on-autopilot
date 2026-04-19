@@ -7,7 +7,7 @@ import InteractiveDemo from "@/components/InteractiveDemo";
 import WhatIs from "@/components/WhatIs";
 import Features from "@/components/Features";
 import FullStack from "@/components/FullStack";
-import HowItWorks from "@/components/HowItWorks";
+
 import IntegrationsStrip from "@/components/IntegrationsStrip";
 import ThreeReasons from "@/components/ThreeReasons";
 import Hardware from "@/components/Hardware";
@@ -40,8 +40,6 @@ const Index = () => (
     {/* What's inside */}
     <Features />
     <FullStack />
-    {/* Three steps + See the full process — moved under the full stack */}
-    <HowItWorks />
     <IntegrationsStrip />
     <ThreeReasons />
     {/* The box & price */}
