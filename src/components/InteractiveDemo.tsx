@@ -211,14 +211,6 @@ const InteractiveDemo = () => {
               </div>
             ))}
           </div>
-          <div className="text-center mt-10">
-            <a
-              href="/how-it-works"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg border-2 border-primary text-primary hover:text-primary-foreground hover:bg-primary transition-all text-base font-semibold"
-            >
-              See the full process →
-            </a>
-          </div>
         </div>
       </div>
     </section>
