@@ -27,17 +27,17 @@ const Index = () => (
   <>
     <Navbar />
     <Hero />
-    {/* The wow: outcomes & proof */}
+    {/* What contractors actually get back */}
     <QuantifiedOutcomes />
-    {/* Built by a contractor — Discord mockup */}
+    {/* Built by contractors */}
     <About />
-    {/* The emotional hook: before/after */}
-    <DayInTheLife />
-    {/* What is it — moved directly after the Tuesday story */}
+    {/* What is MEP Claw */}
     <WhatIs />
-    {/* See it in action */}
+    {/* Real Workflows */}
     <InteractiveDemo />
-    {/* What's inside */}
+    {/* Day In The Life */}
+    <DayInTheLife />
+    {/* Features */}
     <Features />
     <FullStack />
     <IntegrationsStrip />
