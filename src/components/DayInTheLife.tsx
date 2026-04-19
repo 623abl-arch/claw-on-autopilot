@@ -20,7 +20,7 @@ const DayInTheLife = () => {
       <div className="container max-w-7xl mx-auto px-4">
         <div className="text-xs font-medium uppercase tracking-wider text-primary mb-2">A day in your life</div>
         <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-          Real Workflows
+          Day In The Life
         </h2>
         <p className="text-muted-foreground text-base mb-12 max-w-2xl">
           One ends at 11pm chasing voicemails and SaaS bills. The other ends with the AI handling it for you.
