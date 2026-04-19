@@ -1,61 +1,35 @@
 
+Goal: Lighten the dark palette to feel closer to Discord's lighter dark mode (Discord uses around `#313338` for chat, `#2B2D31` for sidebar, `#1E1F22` for the deepest layer) while keeping the same blue accent.
 
-## Add "Live System Status" Floating Widget
+## Current vs proposed (dark theme only)
 
-A collapsible glassmorphism widget pinned to the bottom-right of the homepage, showing live-feeling counters and service status dots.
+| Token | Current | Proposed | Notes |
+|---|---|---|---|
+| `--background` | `222 14% 10%` (#16181c) | `222 10% 18%` (~#2B2D31) | Page bg → Discord sidebar shade |
+| `--card` | `222 14% 14%` (#1f2227) | `220 8% 23%` (~#36373D) | Cards lift above bg |
+| `--popover` | `222 14% 14%` | `220 8% 23%` | Match card |
+| `--secondary` | `222 14% 18%` | `220 7% 28%` (~#42434A) | Buttons/chips |
+| `--muted` | `222 14% 18%` | `220 7% 28%` | Same |
+| `--surface` | `217 20% 16%` | `220 9% 21%` (~#32343A) | Alt section bands |
+| `--callout` | `217 22% 19%` | `220 9% 26%` (~#3C3E45) | Callouts a touch brighter |
+| `--border` | `220 12% 20%` | `220 6% 32%` (~#4C4E55) | More visible separators |
+| `--input` | `220 12% 20%` | `220 6% 32%` | Match border |
+| `--muted-foreground` | `218 11% 55%` | `220 9% 70%` | Slightly brighter secondary text for contrast on lighter bg |
 
-### Behavior
-- **Collapsed (default on mobile)**: small pill — `● 9 systems live` — click to expand
-- **Expanded**: ~300px card with Activity counters + Services status list
-- Dismissible via × (re-collapses, doesn't hide forever)
-- Counters tick on intervals to feel live (no real backend)
+Primary blue (`217 91% 60%`), destructive red, jobber green, and the four competitor tint chips stay the same — only the neutral grays shift up.
 
-### Counter logic (all client-side, no backend)
-- **Visitors today**: 20–200 range based on hour of day (low overnight, peak midday). Recalculated on mount + ticks +1 every ~15s
-- **Live users now**: starts at 400, randomly fluctuates ±2 every 4s
-- **Onboarding this week**: static 8, +1 every ~45s
-- **Quotes generated (all-time)**: starts 12,481, +1 every ~8s
-- **Voice calls today**: starts 342, +1 every ~20s
-- **Invoices auto-sent this week**: starts 89, +1 every ~30s
+## Files to change
 
-### Status dots
-All 9 services listed. 7–8 green, 1 randomly yellow (rotates every 30s) to feel real. Red reserved (none by default). Pulsing dot animation on green.
+1. **`src/index.css`** — update the `:root` block with the new HSL values above. Light mode (`.light`) untouched.
 
-### Visual
-- `bg-card/80 backdrop-blur-md border border-border` — matches ClawHub aesthetic
-- Header: pulsing green dot + "Live System Status" + collapse button
-- Two sections divided by border: ACTIVITY (counters right-aligned) / SERVICES (dot + name)
-- Footer: muted "Updated just now" timestamp
+That's the entire change. No component edits needed because every section already consumes these tokens (`bg-background`, `bg-card`, `bg-surface`, `bg-callout`, `border-border`, etc.), so the lift will apply site-wide automatically.
 
-### Files
-- **NEW** `src/components/LiveStatusWidget.tsx` — single self-contained component with all state + intervals
-- **EDIT** `src/pages/Index.tsx` — mount `<LiveStatusWidget />` once at end of fragment (fixed-position, order-independent)
+## What it'll look like
 
-### Layout
-```text
-┌──────────────────────────────┐
-│ ● Live System Status     [—] │
-├──────────────────────────────┤
-│ ACTIVITY                     │
-│ Visitors today        127    │
-│ Live now              402    │
-│ Onboarding this wk      8    │
-│ Voice calls today     344    │
-│ Quotes (all-time)  12,489    │
-│ Invoices this wk       91    │
-├──────────────────────────────┤
-│ SERVICES                     │
-│ ● Cloudflare Tunnel          │
-│ ● Tailscale VPN              │
-│ ● Twenty CRM                 │
-│ ● Invoice Ninja              │
-│ ● Nextcloud                  │
-│ ● Retell Voice AI            │
-│ ● Nemotron AI Brain          │
-│ ◐ Discord Bot (Jarvis)       │
-│ ● Mini PC node               │
-├──────────────────────────────┤
-│ Updated just now             │
-└──────────────────────────────┘
-```
+- Page background goes from near-black `#16181c` → Discord-ish `#2B2D31`
+- Cards become a clearly lighter `#36373D` floating tile
+- Section bands (savings banner, outcomes) sit between bg and card for gentle striping
+- Borders become visible without being harsh
+- Blue CTA + red ✕ + green/blue/purple/sky competitor chips will pop more against the lighter neutrals
 
+Quick visual verification after applying is recommended since several sections layer translucent tints (`bg-primary/15`, `bg-card/40`) that will read brighter on the new base.
