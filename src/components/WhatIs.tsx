@@ -11,21 +11,21 @@ const WhatIs = () => (
 
       <div className="rounded-xl border border-border bg-card p-6 md:p-8 mb-12 max-w-3xl">
         <h3 className="text-foreground font-semibold text-lg mb-4">How it helps you:</h3>
-        <ul className="space-y-3 text-muted-foreground text-base leading-relaxed">
+        <ul className="space-y-4 text-muted-foreground text-lg leading-relaxed">
           <li className="flex gap-3">
-            <span className="text-primary mt-1">•</span>
+            <span className="mt-0.5">💬</span>
             <span>Type simple messages in Discord to create quotes in under 10 seconds</span>
           </li>
           <li className="flex gap-3">
-            <span className="text-primary mt-1">•</span>
+            <span className="mt-0.5">📍</span>
             <span>View all your job photos on a map — just zoom to any city to see the full history</span>
           </li>
           <li className="flex gap-3">
-            <span className="text-primary mt-1">•</span>
+            <span className="mt-0.5">🧾</span>
             <span>Quotes turn into invoices automatically with easy payment links</span>
           </li>
           <li className="flex gap-3">
-            <span className="text-primary mt-1">•</span>
+            <span className="mt-0.5">🔔</span>
             <span>Everything stays organized with real-time notifications in Discord</span>
           </li>
         </ul>
